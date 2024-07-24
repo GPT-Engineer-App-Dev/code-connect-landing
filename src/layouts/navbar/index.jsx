@@ -2,6 +2,7 @@ import { navItems } from "@/nav-items";
 import { Outlet } from "react-router-dom";
 import { DesktopNavbar } from "./_components/DesktopNavbar";
 import { MobileSheet } from "./_components/MobileSheet";
+import { Button } from "@/components/ui/button";
 
 const Layout = () => {
   return (
@@ -9,6 +10,7 @@ const Layout = () => {
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
         <DesktopNavbar navItems={navItems} />
         <MobileSheet navItems={navItems} />
+        <Button className="hidden md:inline-flex">Get Started</Button>
       </header>
       <main className="flex-grow overflow-auto">
         <Outlet />
